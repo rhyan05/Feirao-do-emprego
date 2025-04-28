@@ -4,12 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feirão de Emprego</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Linking Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
-    <main>
-        <ul class="li">1</ul>
-        <ul class="li">1</ul>
-        <ul class="li">1</ul>
-    </main>
+
+    <!-- Carousel -->
+    <div class="slider-container">
+        <!-- Slider List Items -->
+        <div class="slider-wrapper swiper-wrapper">
+            <div class="slider-item swiper-slide">
+                <div class="slide-content">
+                    <h3 class="slide-subtitle">Slide 01</h3>
+                    <h2 class="slide-title">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2>
+                    <p class="slide-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et optio nihil impedit ea facere, amet ipsa expedita accusamus cumque natus tempora quisquam magni quo molestiae quod aperiam ab sunt odit?</p>
+                    <a href="#" class="slide-button"><span>Learn More</span></a>
+                </div>
+            </div>
+            <div class="slider-item swiper-slide">
+                <div class="slide-content">
+                    <h3 class="slide-subtitle">Slide 02</h3>
+                    <h2 class="slide-title">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2>
+                    <p class="slide-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et optio nihil impedit ea facere, amet ipsa expedita accusamus cumque natus tempora quisquam magni quo molestiae quod aperiam ab sunt odit?</p>
+                    <a href="#" class="slide-button"><span>Learn More</span></a>
+                </div>
+            </div>
+            <div class="slider-item swiper-slide">
+                <div class="slide-content">
+                    <h3 class="slide-subtitle">Slide 03</h3>
+                    <h2 class="slide-title">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2>
+                    <p class="slide-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et optio nihil impedit ea facere, amet ipsa expedita accusamus cumque natus tempora quisquam magni quo molestiae quod aperiam ab sunt odit?</p>
+                    <a href="#" class="slide-button"><span>Learn More</span></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Pagination -->
+        <div class="slider-controls">
+            <ul class="slider-pagination">
+                <div class="slider-indicator"></div>
+                <li class="slider-tab">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li class="slider-tab">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li class="slider-tab">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Linking Swiper Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Linking Custom Script -->
+    <script src="script.js"></script>
 </body>
 </html>
