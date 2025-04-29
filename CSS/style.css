@@ -37,7 +37,7 @@
 }
 
 .slider-wrapper .slider-item:nth-child(2):before {
-    background-image: url("/images/home/carrossel-2.jpg");
+    background-image: url("/images/home/emprego2.jpg");
 }
 
 .slider-wrapper .slider-item:nth-child(3):before {
@@ -246,4 +246,49 @@
     .slider-wrapper .slider-item .slide-content > *{
         max-width: 100%;
     }
+}
+
+
+/* Empresas Parceiras */
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    margin-top: 20px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .slider{
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 100s linear;
+}
+
+@keyframes autoRun {
+    from{
+        transform: perspective(1000px) rotateY(0deg);
+    }to{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.banner .slider .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform:
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity) * 1deg)))
+        translateZ(550px);
+}
+
+.banner .slider .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
