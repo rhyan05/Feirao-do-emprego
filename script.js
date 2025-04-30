@@ -42,3 +42,21 @@ sliderTabs.forEach((tab, index) => {
 
 updateIndicator(sliderTabs[0], 0);
 window.addEventListener("resize", () => updatePagination(sliderTabs[swiper.activeIndex], 0));
+
+// scroll
+    let lastScrollTop = 0;
+    const navbar = document.querySelector(".navbar");
+
+    window.addEventListener("scroll", function () {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            // Rolando para baixo
+            navbar.classList.add("hide");
+        } else {
+            // Rolando para cima
+            navbar.classList.remove("hide");
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
