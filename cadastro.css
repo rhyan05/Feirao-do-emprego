@@ -1,0 +1,118 @@
+/* FORMULARIO */
+
+.cadastro {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+}
+
+.cadastro-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.cadastro-texto {
+    flex: 1;
+    min-width: 300px;
+    background-color: #cfd8e2;
+    padding: 30px 10px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    text-align: left; 
+}
+.title-folder {
+    font-size: 28px;
+    color: #efe9e9;
+    margin-bottom: 0 0 10px;
+    text-transform: uppercase;
+}
+
+.text-cadastro {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.text-cadastro.esquerdo {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    text-align: left;
+    margin-left: 10px;
+    margin-left: 0;
+
+}
+
+.cadastro-caixa {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #aec8d9; /* fundo da caixa geral */
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    flex-wrap: wrap;
+}
+
+.form-cadastro {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+}
+
+.form-cadastro input[type="text"],
+.form-cadastro input[type="email"],
+.form-cadastro input[type="tel"] {
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.form-cadastro input:focus {
+    border-color: #193e60;
+    outline: none;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+}
+
+
+.checkbox-container input {
+    margin-right: 10px;
+}
+
+.form-cadastro button {
+    padding: 12px;
+    background-color: #193e60;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.form-cadastro button:hover {
+    background-color: #14518a;
+}
+
+
