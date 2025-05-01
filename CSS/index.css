@@ -281,6 +281,8 @@
 
 .infocont, .impocont {
     background-size: cover;
+background-attachment: fixed;
+    object-fit: cover;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -290,12 +292,12 @@
 
 .infocont {
     justify-content: flex-start;
-    background-image: url(../Image/informacao/download.jpg);
+    background-image: url(/images/informacao/fundo1.png);
 }
 
 .impocont {
     justify-content: flex-end;
-    background-image: url(../Image/informacao/download.jpg);
+    background-image: url(/images/informacao/fundo2.png);
 }
 
 .infocaixatexto, .impocaixatexto {
@@ -303,7 +305,7 @@
     background-color: #193e60;
     align-content: center;
     align-items: center;
-    width: 49.3%;
+    width: 49.34%;
     height: 700px;
     display: flex;
     margin: 0.625rem;
