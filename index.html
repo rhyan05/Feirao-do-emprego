@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Feirão do Emprego</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+  
+    
+</head>
+<body>
+    
+    <div id="navbar"></div>
+    <div id="carrosel"></div>
+    <div id="info"></div>
+    <div id="importancia"></div>
+    <div id="parceiros"></div>
+    <div id="localizacao"></div>
+    <div id="cadastro"></div>
+    <div id="footer"></div>
+    <div id="banner"></div>
+  
+    <script>
+      const sections = [
+        { id: "navbar", url: "./Components/navbar.html" },
+        { id: "carrosel", url: "./Components/carrossel.html" },
+        { id: "info", url: "./Components/info.html" },
+        { id: "importancia", url: "./Components/importancia.html" },
+        { id: "parceiros", url: "./Components/parceiros.html" },
+        { id: "localizacao", url: "./Components/localizacao.html" },
+        { id: "cadastro", url: "./Components/cadastro.html" },
+        { id: "footer", url: "./Components/footer.html" },
+        { id: "anner", url: "./Components/banner.html" }
+      ];
+  
+      sections.forEach(section => {
+        fetch(section.url)
+          .then(res => res.text())
+          .then(html => {
+            document.getElementById(section.id).innerHTML = html;
+          });
+      });
+      
+        
+    </script>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Feirão Eniac</title>
+        <link rel="stylesheet" href="CSS/index.css">
+        <link rel="stylesheet" href="CSS/navbar.css">
+        <link rel="stylesheet" href="CSS/carrossel.css">
+        <link rel="stylesheet" href="CSS/info.css">
+        <link rel="stylesheet" href="CSS/importancia.css">
+        <link rel="stylesheet" href="CSS/parceiros.css">
+        <link rel="stylesheet" href="CSS/localizacao.css">
+        <!-- <link rel="stylesheet" href="CSS/cadastro.css"> -->
+        <link rel="stylesheet" href="CSS/footer.css">
+    </head>
+    <body>
+        
+    </body>
+    </html>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/Js/carrossel.js"></script>
+    <script src="/Js/scroll.js"></script>
+    <script src="/Js/importancia-expande.js"></script>
+  </body>
