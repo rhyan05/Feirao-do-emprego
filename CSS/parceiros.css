@@ -1,0 +1,77 @@
+/* ========================
+   SLIDER PARCEIROS
+======================== */
+#parceiro {
+    padding: 2rem 0;
+}
+
+.banner {
+    width: 100%;
+    height: 50vh; 
+    margin: 10px 0; 
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.banner .slider {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 70s linear infinite;
+}
+
+@keyframes autoRun {
+    from {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    to {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.banner .slider .item {
+    position: absolute;
+    inset: 0;
+    transform:
+        rotateY(calc((var(--position) - 1) * (360 / var(--quantity) * 1deg)))
+        translateZ(440px);
+}
+
+.banner .slider .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ========================
+   RESPONSIVIDADE
+======================== */
+@media (max-width: 768px) {
+    .banner {
+        height: 60vh;
+        margin: 10px;
+    }
+
+    .banner .slider {
+        width: 150px;
+        height: 200px;
+        left: calc(50% - 75px);
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: 50vh;
+        margin: 10px 5px;
+    }
+
+    .banner .slider {
+        width: 120px;
+        height: 160px;
+        left: calc(50% - 60px);
+    }
+}
