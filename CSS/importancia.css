@@ -39,6 +39,10 @@
   margin: 10px 0; 
 }
 
+.importance-card:hover{
+  background-color: #aec8d9;
+}
+
 .importance-card img {
   width: 80px;
   height: 80px;
