@@ -1,0 +1,94 @@
+.section-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.importance-wrapper {
+  margin-bottom: 40px;
+  padding-top: 20px;
+}
+
+.importance-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; 
+  justify-content: center;
+  padding: 20px; 
+}
+
+.importance-card {
+  width: 220px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 10px 0; 
+}
+
+.importance-card:hover{
+  background-color: #aec8d9;
+}
+
+.importance-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.importance-title {
+  font-weight: bold;
+  margin: 15px 0; 
+  text-align: center;
+  font-size: 16px;
+}
+
+.importance-text {
+  opacity: 0;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  width: 100%;
+  padding: 0 10px; 
+  box-sizing: border-box;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.importance-card.active {
+  height: auto;
+  min-height: 220px;
+  background-color: #eef6ff;
+  z-index: 2;
+  margin: 20px 0;
+  padding-bottom: 25px;
+}
+
+.importance-card.active img {
+  width: 100px;
+  height: 100px;
+}
+
+.importance-card.active .importance-text {
+  opacity: 1;
+  position: static;
+  margin-top: 15px;
+  padding: 10px 5px;
+}
