@@ -1,0 +1,141 @@
+/* ========================
+   NAVBAR
+======================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 20px 30px;
+    color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.hide {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+.navbar-logo img {
+    height: 40px;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 45px;
+    margin: 0;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+    color: #0074cc;
+}
+
+/* Botão de menu hambúrguer */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle img {
+    width: 30px;
+    height: 30px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar-links.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 15px;
+    }
+
+    .navbar-left {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        display: none;
+        text-align: center;
+        background-color: #fff;
+        width: 100%;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+
+    .navbar-links.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);  
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 15px;
+    }
+
+    .navbar-links {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar-logo img {
+        height: 30px;
+    }
+
+    .navbar-links {
+        gap: 10px;
+    }
+
+    .navbar-links li a {
+        font-size: 14px;
+    }
+    .menu-toggle img {
+        height: 20px;
+    }
+}
