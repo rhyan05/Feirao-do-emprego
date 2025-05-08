@@ -1,0 +1,246 @@
+/* ========================
+   BLOCO INFORMAÇÕES
+======================== */
+.info {
+    align-content: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.infocont, .impocont {
+    background-size: cover;
+    background-attachment: fixed;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 700px;
+}
+
+.infocont {
+    justify-content: flex-start;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center;
+}
+
+.impocont {
+    justify-content: flex-end;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center;
+}
+
+.infocaixatexto, .impocaixatexto {
+    position: relative;
+    background: linear-gradient(135deg, rgba(25, 62, 96, 0.9), rgba(50, 100, 150, 0.9));
+    align-content: center;
+    align-items: center;
+    width: 50%;
+    height: 600px;
+    display: flex;
+    margin: 1rem;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.infocaixatexto:hover, .impocaixatexto:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(0, 221, 255, 0.9);
+}
+
+.infotexto, .impotexto {
+    color: #f0f0f0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 1.5rem;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* FORMULARIO */
+.cadastro {
+    background: linear-gradient(180deg, #f0f4f8, #e6edf3);
+    padding: 3rem 1.5rem;
+}
+
+.cadastro-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.cadastro-texto {
+    flex: 1;
+    min-width: 100%;
+    max-width: 90%;
+    background: #d1dbe8;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.cadastro-caixa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 2.5rem;
+    background: #b8d1e3;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-cadastro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 550px;
+}
+
+.form-cadastro input[type="text"],
+.form-cadastro input[type="email"],
+.form-cadastro input[type="tel"] {
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1.1rem;
+    border: 1px solid #bbb;
+    border-radius: 0.6rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-cadastro input:focus {
+    border-color: #193e60;
+    box-shadow: 0 0 8px rgba(25, 62, 96, 0.3);
+    outline: none;
+}
+
+.form-cadastro button {
+    width: 100%;
+    padding: 0.9rem;
+    background: #193e60;
+    color: #fff;
+    border: none;
+    border-radius: 0.6rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+}
+
+.form-cadastro button:hover {
+    background: #14518a;
+    transform: translateY(-2px);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+    .infocont, .impocont {
+        height: 400px;
+    }
+
+    .infocaixatexto, .impocaixatexto {
+        width: 70%;
+        height: 300px;
+        margin: 15px;
+        border-radius: 10px;
+    }
+
+    .infotexto, .impotexto {
+        font-size: 1.4rem;
+        margin: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .infocont, .impocont {
+        height: 350px;
+    }
+
+    .infocaixatexto, .impocaixatexto {
+        width: 80%;
+        height: 250px;
+        margin: 10px;
+    }
+
+    .infotexto, .impotexto {
+        font-size: 1.2rem;
+    }
+
+    .cadastro {
+        padding: 2rem 1rem;
+    }
+
+    .cadastro-caixa {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .infocont, .impocont {
+        height: 300px;
+    }
+
+    .infocaixatexto, .impocaixatexto {
+        width: 90%;
+        height: 200px;
+        margin: 10px;
+    }
+
+    .infotexto, .impotexto {
+        font-size: 1rem;
+    }
+
+    .cadastro-texto {
+        padding: 1.5rem;
+    }
+
+    .cadastro-caixa {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .infocont, .impocont {
+        height: 250px;
+    }
+
+    .infocaixatexto, .impocaixatexto {
+        width: 95%;
+        height: 180px;
+        margin: 8px;
+    }
+
+    .infotexto, .impotexto {
+        font-size: 0.9rem;
+        margin: 0.8rem;
+    }
+
+    .cadastro {
+        padding: 1.5rem 0.75rem;
+    }
+
+    .cadastro-caixa {
+        padding: 1.2rem;
+    }
+
+    .form-cadastro input[type="text"],
+    .form-cadastro input[type="email"],
+    .form-cadastro input[type="tel"] {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    .form-cadastro button {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+    }
+}

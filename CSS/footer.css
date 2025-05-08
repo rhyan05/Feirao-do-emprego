@@ -1,0 +1,152 @@
+/* ========================
+   FOOTER ESTILIZADO
+======================== */
+.footer {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+    color: #f0f0f0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 50px;
+    gap: 30px;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+}
+
+.footer-section {
+    flex: 1 1 250px;
+    min-width: 220px;
+}
+
+.integrantes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer .logo img {
+    height: 100px;
+}
+
+.title-folder {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text-folder {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #0074cc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+
+.text-folder:hover {
+    color: #afb9eb;
+    text-decoration: underline;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #f0f0f0;
+}
+.linkedin-person:hover{
+    color: #0074cc;
+}
+
+.team-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    color: #f0f0f0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.team-list li {
+    margin-bottom: 4px;
+}
+
+.image-folder {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.image-folder img {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.image-folder img:hover {
+    opacity: 0.75;
+}
+
+.li-footer a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+
+.image-folder img {
+    transition: filter 0.3s ease;
+}
+
+.image-folder img:hover {
+    filter: invert(34%) sepia(100%) saturate(1000%) hue-rotate(190deg);
+}
+
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .footer-section {
+        flex: 1;
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .image-folder {
+        flex-direction: row; 
+        justify-content: center;
+        gap: 20px; 
+        margin-top: 15px;
+    }
+
+    .logo, .foot-info {
+        text-align: center;
+    }
+
+    .team-list {
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .team-list li {
+        margin: 0 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-folder {
+        gap: 15px;
+    }
+
+    .image-folder img {
+        width: 24px;
+        height: 24px;
+    }
+}
